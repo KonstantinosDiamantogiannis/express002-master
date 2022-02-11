@@ -12,7 +12,7 @@ const OrderTeam2s = db.sequelize.models.OrderTeam2s;
 // list
 router.get('/', async function (req, res) {
     // let customers = await getCustomers();
-    let customers = await TestCustomer.findAll();
+    let customers = await TestCustomer.findAll({ attributes: ['id', 'firstName', 'lastName', 'email'] });
     // let customer = await TestCustomer.findByPk(1);
     // let product = await ProductTeam2s.findAll();
     

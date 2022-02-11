@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsToMany(models.ProductTeam2s, { // edw dilwnoume to this instance na dwsei association se allo table 
-        through: models.OrderTeam2s,  // best names EU
-        as: 'ProductTeam2s',  
-        foreignKey: 'TestCustomerId'
-      });
+      // this.belongsToMany(models.ProductTeam2s, { // edw dilwnoume to this instance na dwsei association se allo table 
+      //   through: models.OrderTeam2s,  // best names EU
+      //   as: 'ProductTeam2s',  
+      //   foreignKey: 'TestCustomerId'
+      // });
     }
   }
   TestCustomer.init({

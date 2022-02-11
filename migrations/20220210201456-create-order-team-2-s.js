@@ -8,6 +8,22 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      TestCustomerId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'TestCustomers',
+          key: 'id'
+        }
+      },
+      ProductTeam2sId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'ProductTeam2s',
+          key: 'id'
+        }
+      },
       quantity: {
         type: Sequelize.INTEGER
       },

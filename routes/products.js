@@ -7,7 +7,7 @@ var router = express.Router();
 // list
 router.get('/', async function (req, res) {
     // let products = await getproducts();
-    let products = await ProductTeam2s.findAll();
+    let products = await ProductTeam2s.findAll({ attributes: ['id', 'title', 'price'] });
     console.log(products);
     res.render('products/list',
         {
